@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	return view('greeting', ['name' => 'Okuda']);
+	return view('greeting', ['name' => 'You have learned CI!']);
 });
 
 //Route::get('hello', 'HelloController@index');
