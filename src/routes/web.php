@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('greeting', ['name' => 'Okuda']);
 });
+
+//Route::get('hello', 'HelloController@index');
+//Route::post('hello', 'HelloController@post');
