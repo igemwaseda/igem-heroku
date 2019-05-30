@@ -15,5 +15,9 @@ Route::get('/', function () {
 	return view('greeting', ['name' => 'You have learned CI!']);
 });
 
-//Route::get('hello', 'HelloController@index');
-//Route::post('hello', 'HelloController@post');
+Route::get('/register', 'RegistrationController@create');
+Route::post('register', 'RegistrationController@store');
+ 
+Route::get('/login', 'SessionsController@create');
+Route::post('/login', 'SessionsController@store');
+Route::get('/logout', 'SessionsController@destroy');
