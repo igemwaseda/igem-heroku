@@ -15,8 +15,7 @@ Route::get('/', function () {
 	return view('greeting', ['name' => 'You have learned CI!']);
 });
 
-Route::get('/register', 'RegistrationController@create');
-Route::post('register', 'RegistrationController@store');
+Route::resource('posts', 'PostController');
  
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
