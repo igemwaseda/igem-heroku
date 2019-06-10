@@ -1,4 +1,4 @@
-# IGEM ウェブサイト開発
+# IGEM ウェブサイト開発 Ver0.1
 Outline
   - installation
 
