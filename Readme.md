@@ -1,12 +1,14 @@
-# IGEM ウェブサイト開発 Ver0.1
+# IGEM ウェブサイト開発
 Outline
   - installation
-	- setup
+  - setup
+
 # installation
  ```
  git clone https://github.com/igemwaseda/igem-heroku.git
  ```
-# setup
+ 
+ # setup
  ```
  ~/laradock/
  docker-compose up -d workspace nginx mysql phpmyadmin
