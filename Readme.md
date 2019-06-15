@@ -7,11 +7,15 @@ Outline
 # Installation
  ```
  git clone https://github.com/igemwaseda/igem-heroku.git
+ cd igem-heokru
+ git submodule init
+ git submodule update
  ```
 
  # Setup
  ```
  ~/laradock/
+ cp env-example .env
  docker-compose up -d workspace nginx mysql phpmyadmin
  curl localhost
  ```
