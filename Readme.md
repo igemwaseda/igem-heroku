@@ -7,7 +7,7 @@ Outline
 # Installation
  ```
  git clone https://github.com/igemwaseda/igem-heroku.git
- cd igem-heokru
+ cd igem-heroku
  git submodule init
  git submodule update
  ```
