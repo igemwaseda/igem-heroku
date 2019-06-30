@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	return view('greeting', ['name' => 'You have learned CI!']);
+	return view('index', ['name' => 'You have learned CI!']);
 });
 
 Route::resource('posts', 'PostController');
