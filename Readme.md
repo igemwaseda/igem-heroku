@@ -16,6 +16,9 @@ Outline
  ```
  ~/laradock/
  cp env-example .env
+ vim .env
+ APP_CODE_PATH_HOST=../src
+
  docker-compose up -d workspace nginx mysql phpmyadmin
  curl localhost
  ```
