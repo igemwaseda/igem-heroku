@@ -9,21 +9,23 @@
     <h5>Event</h5>
     <div class="divider"></div>
     <div class="row">
-      <div class="article col s12 m4 l3">
-        <h6>Title1</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">hogehogehogehogehogehogehogehogehoge</p>
-      </div>
-      <div class="article col s12 m4 l3">
-        <h6>Title2</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">piyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyo</p>
-      </div>
-      <div class="article col s12 m4 l3">
-        <h6>Title3</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">The train came out of the long tunnel into the snow country.</p>
-      </div>
+      @forelse ($events as $event)
+        <a href="{{ anchor }}">
+          <div class="col s12 m4 l3">
+            <div class="card teal">
+              <div class="card-content white-text">
+                <h6>{{ title }}</h6>
+                <img width="100%" src="image/article.png">
+                <p class="truncate">{{ content }}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      @empty
+        <div class="col s12">
+          <h3 class="center-align">まだ記事は投稿されていません</h3>
+        </div>
+      @endforelse
     </div>
   </div>
 </div>

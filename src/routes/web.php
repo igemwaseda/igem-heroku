@@ -11,25 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-	return view('index');
-});
+Route::get('/','WebsiteController@index');
 
-Route::get('/igem', function () {
-	return view('igem');
-});
+Route::get('/igem','WebsiteController@igem');
 
-Route::get('/about', function () {
-	return view('about');
-});
+Route::get('/about','WebsiteController@about');
 
-Route::get('/activity', function () {
-	return view('activity');
-});
+Route::get('/activity','WebsiteController@activity');
 
-Route::get('/event', function () {
-	return view('event');
-});
+Route::get('/event','WebsiteController@event');
 
 Route::resource('posts', 'PostController');
 
