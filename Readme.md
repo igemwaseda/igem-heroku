@@ -18,6 +18,7 @@ Outline
  cp env-example .env
  vim .env
  APP_CODE_PATH_HOST=../src
+ MYSQL_VERSION=5.5
 
  docker-compose up -d workspace nginx mysql phpmyadmin
  curl localhost
