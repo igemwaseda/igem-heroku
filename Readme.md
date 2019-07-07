@@ -6,10 +6,12 @@ Outline
 
 # Installation
  ```
- git clone https://github.com/igemwaseda/igem-heroku.git
+ git clone --recursive https://github.com/igemwaseda/igem-heroku.git
  cd igem-heroku
- git submodule init
- git submodule update
+ vim .git/config 　# delete line 7 ([submodule]) and 8 (active = .)
+ rm -rf laradock
+ git rm --cached laradock
+ git submodule add https://github.com/laradock/laradock.git
  ```
 
  # Setup
