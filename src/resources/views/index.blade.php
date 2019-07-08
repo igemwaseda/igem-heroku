@@ -4,66 +4,71 @@
 @include('header')
 
 @section('content')
-<img width="100%" src="https://scontent-nrt1-1.cdninstagram.com/vp/eb209d00e607d5fb951e41c7f7815921/5D8F9E01/t51.2885-15/e35/23417162_1723796607654339_7565909398158049280_n.jpg?_nc_ht=scontent-nrt1-1.cdninstagram.com">
 <div class="container">
-  <div class="section">
+  <div class="section scrollspy" id="igem">
     <h5>iGEMとは</h5>
     <div class="divider"></div>
-    <p>iGEM( International Genetically Engineered Machine competition)とは合成生物学の世界大会のことです。この大会は年に一回ボストンで開催され、そこでは遺伝子組み換えによって自分たちで作り出した新たな生物システムをチームでプレゼンし、その機能、実現性、実用性などを競い合います。iGEMは2004年に米5大学間の大会として始まり、今では世界各国から約300チーム、4000人が集まる国際大会へと発展しました。</p>
-    <a href="/igem"><p class="right-align">...more<p></a>
+    <p>iGEMとはiGEM( International Genetically Engineered Machine competition)とは合成生物学の世界大会のことです。この大会は年に一回ボストンで開催されます。そこでは遺伝子工学によって自分たちで新たな生物的なパーツを作り出します。その機能、実用性、実現性などをチームでプレゼンし、競い合います。iGEMは2004年に米5大学間の大会として始まり、今では世界各国から約300チーム、4000人が集まる国際大会へと発展しました。</p>
+    <a href="/igem" class="waves-effect waves-light btn-small right red lighten-1"><i class="material-icons left">arrow_forward</i>MORE</a>
   </div>
-  <div class="section">
+  <div class="section scrollspy" id="about">
     <h5>About us</h5>
     <div class="divider"></div>
-    <p>The train came out of the long tunnel into the snow country. The earth lay white under the night sky. The train pulled up at a signal stop.A girl who had been sitting on the other side of the car came over and opened the window in front of Shimamura. The snowy cold poured in. Leaning far out the window, the girl called to the station master as though he were a great distance away.The station master walked slowly over the snow, a lantern in his hand. His face was buried to the nose in a muffler, and the flaps of his cap were turned down over his face.</p>
-    <a href="/about"><p class="right-align">...more<p></a>
+    <p>私たちはiGEM(合成生物学の世界大会)に挑戦している早稲田大学のチームです。先進理工学部電気情報生命工学科を中心とした現在10名ほどで、2020年大会の出場、金賞の獲得を目標に活動しています。本大学初めての本格的なiGEMチームということもあり、現在はチームの基盤づくりや生物、情報分野の基礎的な勉強に励んでいます。</p>
+    <a href="/about" class="waves-effect waves-light btn-small right red"><i class="material-icons left">arrow_forward</i>MORE</a>
   </div>
-  <div class="section">
-    <h5>Activity</h5>
-    <div class="divider"></div>
-    <p>The train came out of the long tunnel into the snow country. The earth lay white under the night sky. The train pulled up at a signal stop.A girl who had been sitting on the other side of the car came over and opened the window in front of Shimamura. The snowy cold poured in. Leaning far out the window, the girl called to the station master as though he were a great distance away.The station master walked slowly over the snow, a lantern in his hand. His face was buried to the nose in a muffler, and the flaps of his cap were turned down over his face.</p>
-    <a href="/activity"><p class="right-align">...more<p></a>
-  </div>
-  <div class="section">
+  <div class="section scrollspy" id="event">
     <h5>Event</h5>
     <div class="divider"></div>
     <div class="row">
-      <div class="article col s12 m4 l3">
-        <h6>Title1</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">hogehogehogehogehogehogehogehogehoge</p>
-      </div>
-      <div class="article col s12 m4 l3">
-        <h6>Title2</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">piyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyo</p>
-      </div>
-      <div class="article col s12 m4 l3">
-        <h6>Title3</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">The train came out of the long tunnel into the snow country.</p>
-      </div>
+      @forelse ($events as $event)
+        <div class="col s12 m6">
+          <a href="{{ $event['anchor'] }}">
+            <div class="card teal lighten-1">
+              <div class="card-content black-text">
+                <div class="row">
+                  <img class="circle responsive-img col" src="image/article.png">
+                  <div class="col">
+                    <h6>{{ $event['title'] }}</h6>
+                    <p class="truncate">{{ $event['content'] }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      @empty
+        <div class="col s12">
+          <h3 class="center-align">まだ記事は投稿されていません</h3>
+        </div>
+      @endforelse
     </div>
   </div>
-  <div class="section">
+  <div class="section scrollspy" id="activity">
     <h5>Activity</h5>
     <div class="divider"></div>
     <div class="row">
-      <div class="article col s12 m4 l3">
-        <h6>Title1</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">hogehogehogehogehogehogehogehogehoge</p>
-      </div>
-      <div class="article col s12 m4 l3">
-        <h6>Title2</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">piyopiyopiyopiyopiyopiyopiyopiyopiyopiyopiyo</p>
-      </div>
-      <div class="article col s12 m4 l3">
-        <h6>Title3</h6>
-        <img width="100%" src="https://classconnection.s3.amazonaws.com/140/flashcards/4182140/gif/organelles-1424887EA507510AD56-thumb400.gif" alt="">
-        <p class="truncate">The train came out of the long tunnel into the snow country.</p>
-      </div>
+      @forelse ($activities as $activity)
+        <div class="col s12 m6">
+          <a href="{{ $activity['anchor'] }}">
+            <div class="card teal lighten-1">
+              <div class="card-content white-text">
+                <div class="row">
+                  <img class="circle responsive-img col s4" src="image/article.png">
+                  <div class="col s8">
+                    <h6>{{ $activity['title'] }}</h6>
+                    <p class="truncate">{{ $activity['content'] }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      @empty
+        <div class="col s12">
+          <h3 class="center-align">まだ記事は投稿されていません</h3>
+        </div>
+      @endforelse
     </div>
   </div>
 </div>

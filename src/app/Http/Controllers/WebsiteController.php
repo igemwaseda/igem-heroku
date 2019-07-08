@@ -29,6 +29,7 @@ class WebsiteController extends Controller
   public function activity ()
   {
     $activities = Article::all()->toArray();
+
     return view('activity',compact('activities'));
   }
 

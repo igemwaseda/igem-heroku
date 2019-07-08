@@ -1,15 +1,16 @@
 @section('header')
 <link rel="stylesheet" href="{{ asset('css/header.css') }}">
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="/igem/#iGEM">iGEMとは</a></li>
-  <li><a href="/igem/#biology">合成生物学とは</a></li>
+  <li><a href="/igem#iGEM">iGEMとは</a></li>
+  <li><a href="/igem#feature">特徴</a></li>
+  <li><a href="/igem#example">研究例</a></li>
 </ul>
 <ul id="dropdown2" class="dropdown-content">
-  <li><a href="/about/#information">Information</a></li>
-  <li><a href="/about/#contact">Contact</a></li>
+  <li><a href="/about#information">Information</a></li>
+  <li><a href="/about#contact">Contact</a></li>
 </ul>
 <div class="navbar-fixed">
-  <nav class="teal">
+  <nav class="teal lighten-1">
     <div class="nav-wrapper">
       <a href="/" class="brand-logo" id="customed-logo">WASEDA-iGEM</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -23,11 +24,12 @@
   </nav>
 </div>
 <ul id="slide-out" class="sidenav">
-  <li style="height:100px"><a href="/" class="brand-logo teal-text customed-logo"><h3>WASEDA<br>-iGEM</h3></a><li>
+  <li style="height:100px"><a href="/" class="brand-logo teal-text lighten-1 customed-logo"><h3>WASEDA<br>-iGEM</h3></a><li>
   <li><div class="divider"></div></li>
   <li><a href="/igem"><h4>iGEM</h4></a></li>
   <li><a href="/igem#iGEM" class="subheader">iGEMとは</a></li>
-  <li><a href="/igem#biology" class="subheader">合成生物学とは</a></li>
+  <li><a href="/igem#feature" class="subheader">特徴</a></li>
+  <li><a href="/igem#example" class="subheader">研究例</a></li>
   <li><div class="divider"></div></li>
   <li><a href="/about"><h4>About us</h4></a></li>
   <li><a href="/about#information" class="subheader">Information</a></li>
@@ -37,4 +39,7 @@
   <li><div class="divider"></div></li>
   <li><a href="/event"><h4>Event</h4></a></li>
 </ul>
+<div class="parallax-container">
+    <div class="parallax"><img width="100%" src="image/mainvisual.jpg"></div>
+</div>
 @endsection
