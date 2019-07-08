@@ -11,12 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-	return view('greeting', ['name' => 'You have learned CI!']);
-});
+Route::get('/','WebsiteController@index');
+
+Route::get('/igem','WebsiteController@igem');
+
+Route::get('/about','WebsiteController@about');
+
+Route::get('/activity','WebsiteController@activity');
+
+Route::get('/event','WebsiteController@event');
 
 Route::resource('posts', 'PostController');
- 
+
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
 Route::get('/logout', 'SessionsController@destroy');

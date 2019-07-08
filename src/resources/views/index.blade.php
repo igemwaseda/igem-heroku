@@ -1,99 +1,75 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('template')
+@section('title', 'Waseda-iGEM')
+@include('head')
+@include('header')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
+@section('content')
+<div class="container">
+  <div class="section scrollspy" id="igem">
+    <h5>iGEMとは</h5>
+    <div class="divider"></div>
+    <p>iGEMとはiGEM( International Genetically Engineered Machine competition)とは合成生物学の世界大会のことです。この大会は年に一回ボストンで開催されます。そこでは遺伝子工学によって自分たちで新たな生物的なパーツを作り出します。その機能、実用性、実現性などをチームでプレゼンし、競い合います。iGEMは2004年に米5大学間の大会として始まり、今では世界各国から約300チーム、4000人が集まる国際大会へと発展しました。</p>
+    <a href="/igem" class="waves-effect waves-light btn-small right red lighten-1"><i class="material-icons left">arrow_forward</i>MORE</a>
+  </div>
+  <div class="section scrollspy" id="about">
+    <h5>About us</h5>
+    <div class="divider"></div>
+    <p>私たちはiGEM(合成生物学の世界大会)に挑戦している早稲田大学のチームです。先進理工学部電気情報生命工学科を中心とした現在10名ほどで、2020年大会の出場、金賞の獲得を目標に活動しています。本大学初めての本格的なiGEMチームということもあり、現在はチームの基盤づくりや生物、情報分野の基礎的な勉強に励んでいます。</p>
+    <a href="/about" class="waves-effect waves-light btn-small right red"><i class="material-icons left">arrow_forward</i>MORE</a>
+  </div>
+  <div class="section scrollspy" id="event">
+    <h5>Event</h5>
+    <div class="divider"></div>
+    <div class="row">
+      @forelse ($events as $event)
+        <div class="col s12 m6">
+          <a href="{{ $event['anchor'] }}">
+            <div class="card teal lighten-1">
+              <div class="card-content black-text">
+                <div class="row">
+                  <img class="circle responsive-img col" src="image/article.png">
+                  <div class="col">
+                    <h6>{{ $event['title'] }}</h6>
+                    <p class="truncate">{{ $event['content'] }}</p>
+                  </div>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+              </div>
             </div>
+          </a>
         </div>
-    </body>
-</html>
+      @empty
+        <div class="col s12">
+          <h3 class="center-align">まだ記事は投稿されていません</h3>
+        </div>
+      @endforelse
+    </div>
+  </div>
+  <div class="section scrollspy" id="activity">
+    <h5>Activity</h5>
+    <div class="divider"></div>
+    <div class="row">
+      @forelse ($activities as $activity)
+        <div class="col s12 m6">
+          <a href="{{ $activity['anchor'] }}">
+            <div class="card teal lighten-1">
+              <div class="card-content white-text">
+                <div class="row">
+                  <img class="circle responsive-img col s4" src="image/article.png">
+                  <div class="col s8">
+                    <h6>{{ $activity['title'] }}</h6>
+                    <p class="truncate">{{ $activity['content'] }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      @empty
+        <div class="col s12">
+          <h3 class="center-align">まだ記事は投稿されていません</h3>
+        </div>
+      @endforelse
+    </div>
+  </div>
+</div>
+@endsection
