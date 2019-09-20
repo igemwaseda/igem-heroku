@@ -71,5 +71,22 @@
       @endforelse
     </div>
   </div>
+  <div class="section">
+    <h5>twitter</h5>
+    <div class="divider"></div>
+    <a class="twitter-timeline" id="twitter" data-width="100" data-lang="ja" data-theme="dark" data-link-color="#26a69a" href="https://twitter.com/Wasedaigem?ref_src=twsrc%5Etfw">
+      Tweets by Wasedaigem
+    </a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
 </div>
+<script type="text/javascript">
+  const screen_size_px = window.parent.screen.width;
+  const screen_size = parseInt(screen_size_px);
+  if (screen_size >= 600) {
+    document.getElementById('twitter').setAttribute('data-width', screen_size*0.85/2);
+  } else {
+    document.getElementById('twitter').setAttribute('data-width', screen_size);
+  }
+</script>
 @endsection

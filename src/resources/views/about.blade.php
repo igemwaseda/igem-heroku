@@ -31,6 +31,34 @@
       </div>
       <i class="large material-icons col m4 hide-on-small-only center-align">contact_mail</i>
     </div>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card-panel grey lighten-5 z-depth-1 row">
+          <div class="col s3 m2">
+            <i class="small material-icons">email</i>
+          </div>
+          <div class="col s9 m4">
+            <a href="mailto:igem2020admin@list.waseda.jp">
+              <span class="black-text">
+                igem2020admin@list.waseda.jp
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card-panel grey lighten-5 z-depth-1 row">
+          <div class="col s3 m2">
+            <img src="image/twitter.png" alt="" class="circle responsive-img" width="30px">
+          </div>
+          <div class="col s9 m4">
+            <span class="black-text">
+              @Wasedaigem
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 @endsection
