@@ -39,7 +39,4 @@
   <li><div class="divider"></div></li>
   <li><a href="/event"><h4>Event</h4></a></li>
 </ul>
-<div class="parallax-container">
-    <div class="parallax"><img width="100%" src="image/mainvisual.jpg"></div>
-</div>
 @endsection
