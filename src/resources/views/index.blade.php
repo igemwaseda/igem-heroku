@@ -25,10 +25,10 @@
         <div class="col s12 m6">
           <a href="{{ $event['anchor'] }}">
             <div class="card teal lighten-1">
-              <div class="card-content black-text">
+              <div class="card-content white-text">
                 <div class="row">
                   <img class="circle responsive-img col" src="image/article.png">
-                  <div class="col">
+                  <div class="col s12">
                     <h6>{{ $event['title'] }}</h6>
                     <p class="truncate">{{ $event['content'] }}</p>
                   </div>

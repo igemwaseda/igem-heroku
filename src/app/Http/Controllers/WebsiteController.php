@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Article;
+use App\Event;
 
 class WebsiteController extends Controller
 {
@@ -11,7 +12,7 @@ class WebsiteController extends Controller
   public function index ()
   {
     $activities = Article::all()->toArray();
-    $events = array();
+    $events = Event::all()->toArray();
 
     return view('index',compact('activities', 'events'));
   }
@@ -35,7 +36,7 @@ class WebsiteController extends Controller
 
   public function event ()
   {
-    $events = array();
+    $events = Event::all()->toArray();
 
     return view('event',compact('events'));
   }
