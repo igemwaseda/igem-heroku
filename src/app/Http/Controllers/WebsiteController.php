@@ -11,8 +11,8 @@ class WebsiteController extends Controller
 
   public function index ()
   {
-    $activities = Article::all()->toArray();
-    $events = Event::all()->toArray();
+    $activities = Article::take(2)->get()->toArray();
+    $events = Event::take(2)->get()->toArray();
 
     return view('index',compact('activities', 'events'));
   }
