@@ -12,7 +12,7 @@
 <div class="navbar-fixed">
   <nav class="teal lighten-1">
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo" id="customed-logo">WASEDA-iGEM</a>
+      <a href="/" class="brand-logo" id="customed-logo">iGEM-Waseda</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="/igem" class="dropdown-trigger" data-target="dropdown1">iGEM</a></li>
         <li><a href="/about" class="dropdown-trigger" data-target="dropdown2">About us</a></li>
@@ -24,7 +24,7 @@
   </nav>
 </div>
 <ul id="slide-out" class="sidenav">
-  <li style="height:100px"><a href="/" class="brand-logo teal-text lighten-1 customed-logo"><h3>WASEDA<br>-iGEM</h3></a><li>
+  <li style="height:100px"><a href="/" class="brand-logo teal-text lighten-1 customed-logo"><h3>iGEM<br>-Waseda</h3></a><li>
   <li><div class="divider"></div></li>
   <li><a href="/igem"><h4>iGEM</h4></a></li>
   <li><a href="/igem#iGEM" class="subheader">iGEMとは</a></li>
