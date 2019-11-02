@@ -12,7 +12,7 @@
       <i class="large material-icons col m4 hide-on-small-only center-align">school</i>
       <div class="col m8">
         <p>
-          iGEMとはiGEM( International Genetically Engineered Machine competition)とは合成生物学の世界大会のことです。
+          iGEM( International Genetically Engineered Machine competition)とは合成生物学の世界大会のことです。
           この大会は年に一回ボストンで開催されます。そこでは遺伝子工学によって自分たちで新たな生物的なパーツを作り出します。
           その機能、実用性、実現性などをチームでプレゼンし、競い合います。
           iGEMは2004年に米5大学間の大会として始まり、今では世界各国から約300チーム、4000人が集まる国際大会へと発展しました。
