@@ -1,5 +1,5 @@
 @extends('template')
-@section('title', 'Waseda-iGEM')
+@section('title', 'iGEM-Waseda')
 @include('head')
 @include('header')
 
